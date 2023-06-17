@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var dayOfWeek = DateTime.Now.DayOfWeek;
+    var email = "Support@AdrianSchoolSystem.com";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Zapraszamy do <br />Adrian School System </h1>
+
+
+    @switch (dayOfWeek)
+    {
+        case DayOfWeek.Monday:
+            <p> Dziś jest poniedziałek</p>
+            break;
+        case DayOfWeek.Tuesday:
+            <p> Dziś jest wtorek</p>
+            break;
+        case DayOfWeek.Wednesday:
+            <p> Dziś jest środa</p>
+            break;
+        case DayOfWeek.Thursday:
+            <p> Dziś jest czwartek</p>
+            break;
+        case DayOfWeek.Friday:
+            <p> Dziś jest piątek</p>
+            break;
+        case DayOfWeek.Saturday:
+            <p> Dziś jest sobota !!</p>
+            break;
+        case DayOfWeek.Sunday:
+            <p> Dziś jest niedziela !!</p>
+            break;
+
+    }
+    <br />
+    <p>Zapraszamy</p>
+    <a href="mailto:@email">@email</a>
+</div>
+
+
